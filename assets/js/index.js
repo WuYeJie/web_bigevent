@@ -16,9 +16,6 @@ function getUserInfo() {
   $.ajax({
     method: 'GET',
     url: '/my/userinfo',
-    // headers: {// headers 就是请求头配置对象
-    //   Authorization: localStorage.getItem('token') || ''
-    // },
     success: function (res) {
       if (res.status !== 0) {
         return layui.layer.msg('获取用户信息失败! ')
